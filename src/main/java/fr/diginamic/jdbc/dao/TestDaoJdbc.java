@@ -8,7 +8,7 @@ import fr.diginamic.jdbc.entites.Fournisseur;
 public class TestDaoJdbc {
 
 	public static void main(String[] args) {
-		FournisseurDaoJbdc OperationFournisseur=new FournisseurDaoJbdc();
+		FournisseurDaoJbdc2 OperationFournisseur=new FournisseurDaoJbdc2();
 		OperationFournisseur.insert(new Fournisseur("France de matériaux", 5));
 		List<Fournisseur>fournisseurs=OperationFournisseur.extraire();
 		for(Fournisseur fournisseur :fournisseurs) {
@@ -24,7 +24,7 @@ public class TestDaoJdbc {
 		for(Fournisseur fournisseur :fournisseurs) {
 			System.out.println(fournisseur.getNom() +" "+ fournisseur.getId());
 		}
-
+		OperationFournisseur.insert(new Fournisseur("L'espace Création", 6));
 	}
 
 }
